@@ -8,13 +8,11 @@ const {
 } = require("electron-updater");
 
 let mainWindow;
-let isDev;
 
-if (isDev) {
-	autoUpdater.updateConfigPath = path.join(
-		__dirname,
-		"dev-app-update.yml"
-	);
+if (process.env.NODE_ENV === "development") {
+	autoUpdater.autoDownload = false;
+	// autoUpdater.autoInstallOnAppQuit = false;
+	autoUpdater.checkForUpdates();
 }
 
 function createWindow() {
