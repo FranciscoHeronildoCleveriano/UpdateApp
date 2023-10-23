@@ -1,6 +1,6 @@
 {
 	"name": "update-example",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"description": "",
 	"main": "main.js",
 	"repository": {
@@ -16,10 +16,10 @@
 	"author": "FranciscoHeronildoCleveriano",
 	"license": "ISC",
 	"devDependencies": {
-		"electron": "^5.0.1",
-		"electron-builder": "^20.40.2"
+		"electron": "^27.0.2",
+		"electron-builder": "^24.6.4"
 	},
 	"dependencies": {
-		"electron-updater": "^4.0.6"
+		"electron-updater": "^6.1.4"
 	}
 }
