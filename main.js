@@ -8,6 +8,14 @@ const {
 } = require("electron-updater");
 
 let mainWindow;
+let isDev;
+
+if (isDev) {
+	autoUpdater.updateConfigPath = path.join(
+		__dirname,
+		"dev-app-update.yml"
+	);
+}
 
 function createWindow() {
 	mainWindow = new BrowserWindow({
@@ -22,7 +30,7 @@ function createWindow() {
 		mainWindow = null;
 	});
 	mainWindow.once("ready-to-show", () => {
-		autoUpdater.checkForUpdates();
+		autoUpdater.checkForUpdatesAndNotify();
 	});
 }
 
