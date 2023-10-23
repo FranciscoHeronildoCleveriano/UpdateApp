@@ -9,11 +9,11 @@ const {
 
 let mainWindow;
 
-if (process.env.NODE_ENV === "development") {
-	autoUpdater.autoDownload = false;
-	// autoUpdater.autoInstallOnAppQuit = false;
-	autoUpdater.checkForUpdates();
-}
+// if (process.env.NODE_ENV === "development") {
+// 	autoUpdater.autoDownload = false;
+// 	autoUpdater.autoInstallOnAppQuit = false;
+// 	autoUpdater.checkForUpdates();
+// }
 
 function createWindow() {
 	mainWindow = new BrowserWindow({
